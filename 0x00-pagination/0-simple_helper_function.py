@@ -5,6 +5,9 @@ from typing import Tuple
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """a fast way to test the checker"""
-    if page == 1:
-        return(0, page_size*page)
-    return(page * 10, page_size * page)
+    l_index = 0
+
+    for i in range(page):
+        f_index = l_index
+        l_index += page_size
+    return(f_index, l_index)
