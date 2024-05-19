@@ -58,6 +58,7 @@ class Server:
         dic['page_size'] = len(element)
         if d_set.get(index):
             dic['next_index'] = index
-        dic['next_index'] = None
+        else:
+            dic['next_index'] = None
 
         return dic
