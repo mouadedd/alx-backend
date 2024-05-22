@@ -18,7 +18,7 @@ class FIFOCache(BaseCaching):
         else:
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS and\
                     key not in self.cache_data:
-                print(f"DISCARD:{self.cache_list[0]}")
+                print(f"DISCARD: {self.cache_list[0]}")
                 del self.cache_data[self.cache_list[0]]
                 del self.cache_list[0]
             self.cache_list.append(key)
